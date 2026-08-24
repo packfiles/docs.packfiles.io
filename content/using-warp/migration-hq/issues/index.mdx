@@ -1,0 +1,74 @@
+---
+title: "Issues"
+icon: list-check
+description: Where Warp stores its list of migrations
+
+layout:
+  title:
+    visible: true
+---
+The _Issues_ page of _Migration HQ_ is the list of the Project’s migrations. For each repository that Warp finds in the sources you provide (e.g. Azure DevOps), it creates an issue representing that repository:
+
+<Frame>
+  <img src="/content/media/images/Every repository has its own issue (1).png" alt="&#x22;Every repository has its own issue&#x22; — diagram showing that for every repository in the source, Warp creates a corresponding issue in Migration HQ." />
+</Frame>
+
+### Viewing Open Issues
+
+**When you open _Migration HQ_’s _Issues_ page, you will see the open issues list, which GitHub displays by default.** Items in the open issues list correspond to repositories that have not yet been migrated:
+
+<Frame caption="The **open issues list** in the *Issues* page, which displays the Project repositories that have not been migrated.">
+  <img src="/content/media/images/image (40).png" alt="The open issues list in the &#x22;Issues&#x22; page in Migration HQ." />
+</Frame>
+
+**To view an open issue, click its name.** You will be taken to its issue page, which will display its details, and which you can use to issue commands, including the command to start a migration.
+
+You can filter _Migration HQ_ issues in the same ways you would in a standard GitHub repository: by open/closed status, author, label, and so on.
+
+### Viewing Closed Issues
+
+Items in the closed issues list correspond to repositories that have either been migrated or ignored:
+
+<Frame caption="The **closed issues list** in the *Issues* page, which displays the Project’s migrated and ignored repositories.">
+  <img src="/content/media/images/image (42).png" alt="The closed issues list in the &#x22;Issues&#x22; page in Migration HQ." />
+</Frame>
+
+**To view an closed issue, click its name.** You will be taken to its issue page, which will display its details, including information about the migration.
+
+### Closing Issues
+
+There are two ways to close an open issue in _Migration HQ:_
+
+1.  **Automatically.** After a successful migration of a repository to GitHub, Warp changes the status of its corresponding issue to _Closed_. The issue will move from the open issues list to the closed issues list, and the _Closed_ indicator will appear below the title of its page:
+
+
+    <Frame>
+      <img src="/content/media/images/image (2) (1) (1) (1) (1).png" alt="The top-level heading for an issue: &#x22;[Azure DevOps] TailwindTraders-Website&#x22;. The &#x22;Closed&#x22; indicator appears below the headline." width="375" />
+    </Frame>
+2.  **Manually.** You can close one or more issues manually by checking their boxes in the open issues list and selecting either **Completed** or **Not Planned** from the **Mark as** menu:
+
+
+    <Frame caption="Marking an issue as *Completed*, which will cause the repository to be ignored.">
+      <img src="/content/media/images/image (1) (1) (1) (1) (1) (1) (1).png" alt="The open issues list in the “Issues” page of Migration HQ. One of the issues is checked, and the user has the “Mark as” dropdown menu open and is selecting the “Completed” option." />
+    </Frame>
+
+    You can also manually close an issue on its own page — see [_Issue Page_](issue-page) for details.
+
+    **By closing an issue manually, you are choosing to _ignore_ the repository.** Ignoring a repository has these effects:
+
+* It moves the issue to the closed issues list.
+* Warp will ignore any slash commands (commands that you issue to Warp) entered into the issue’s comments and it will not update the issue’s content.
+
+### Re-opening Issues
+
+If you decided that you need to re-migrate a repository, you can do so by re-opening its issue. You can re-open one or more issues by checking their boxes in the closed issues list and selecting **Open** from the **Mark as** menu:
+
+<Frame caption="Marking an issue as *Open*, which makes it a candidate for migration again.">
+  <img src="/content/media/images/image (2) (1) (1) (1) (1) (1).png" alt="The closed issues list in the “Issues” page of Migration HQ. One of the issues is checked, and the user has the “Mark as” dropdown menu open and is selecting the “Open” option." />
+</Frame>
+
+Re-opening an issue has these effects:
+
+* It moves the issue to the open issues list.
+* Warp will once again pay attention to slash commands entered into the issue’s comments and will update the issue’s content as its status changes.
+

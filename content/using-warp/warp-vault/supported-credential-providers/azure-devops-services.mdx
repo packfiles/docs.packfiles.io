@@ -1,0 +1,147 @@
+---
+title: "Azure DevOps Services"
+icon: microsoft
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+---
+The Azure DevOps credential type stores the Personal Access Token and configuration associated with the Azure DevOps Organization(s) from which you're migrating data with Warp.
+
+To configure an Azure DevOps credential, you'll need:
+
+- A Personal Access Token (Global or Single Organization),
+- Your Organization Slug (if you're not using a Global token), and
+- The number of days until your token expires (from the day of issue)
+
+### Configuration
+
+<Info>
+  Search for the 🛠️ emoji if you’d like to skim through this content while
+  focusing on the steps you need to follow.
+</Info>
+
+### Get the Organization Slug
+
+🛠️ Sign in to Azure DevOps and navigate to the page for the organization containing the projects whose repositories you want to migrate:
+
+<Frame caption="The organization page in Azure DevOps.">
+  <img
+    src="/content/media/images/image (17) (1).png"
+    alt="The organization page in Azure DevOps. The &#x22;Projects&#x22; tab is on display, and it contains 3 projects: &#x22;Parts Unlimited,&#x22; &#x22;Tailwind Traders,&#x22; and &#x22;First Project.&#x22;"
+  />
+</Frame>
+
+<Info>
+  The example Azure DevOps organization for this quickstart is
+  **joey-ado-testing**.
+</Info>
+
+Make a note of the URL in your browser’s address bar. The URL contains the _organization slug_, which is the part of the URL that uniquely identifies the organization. It’s the part of the URL after `dev.azure.com/`:
+
+<Frame caption="The browser's address bar, while on the organization page in Azure Devops.">
+  <img
+    src="/content/media/images/image (18) (1).png"
+    alt="Close-up of the browser&#x27;s address bar, which displays the URL &#x22;dev.azure.com/joey-ado-testing&#x22;."
+    width="375"
+  />
+</Frame>
+
+In this example, the URL for the organization’s page is:
+
+```
+dev.azure.com/joey-ado-testing
+```
+
+The organization slug is the part that comes after `dev.azure.com/`, which means that this example’s organization slug is:
+
+```
+joey-ado-testing
+```
+
+🛠️ Copy the organization slug from your browser’s address bar and paste it someplace safe — you’ll use it when you create the vault file.
+
+### Generate a Personal Access Token for Your Organization
+
+It’s time to get a Personal Access Token.
+
+🛠️ Near the top right corner of the page, you’ll see the <img src="/content/media/images/image (19) (1).png" alt="" data-size="line" /> (_User Settings_) icon. Click it to reveal its menu:
+
+<Frame caption="The menu that appears when you click the *User Settings* icon.">
+  <img
+    src="/content/media/images/image (16) (1).png"
+    alt="The menu that appears when you click the User Settings icon. The key item in the menu is the &#x22;Personal access tokens&#x22; item."
+    width="363"
+  />
+</Frame>
+
+🛠️ Select **Personal access tokens** from the menu.
+
+You will see the _Personal Access Tokens_ page:
+
+<Frame caption="The *Personal Access Tokens* page.">
+  <img
+    src="/content/media/images/image (20) (1).png"
+    alt="The Personal Access Tokens page. It is empty and displays the text &#x22;You do not have any personal access tokens yet.&#x22; There are two identical &#x22;New Token&#x22; buttons on the page; one near the top right corner, and one in the middle."
+  />
+</Frame>
+
+🛠️ Click any of the **New Token** buttons on the page.
+
+A panel will appear, prompting you to create a new personal access token:
+
+<Frame caption="The *Create a new personal access token* panel.">
+  <img
+    src="/content/media/images/image (21) (1).png"
+    alt="The &#x22;Create a new personal access token&#x22; panel, which is a form. The &#x22;Name&#x22; field contains &#x22;Warp migration 1&#x22;, the &#x22;Organization&#x22; field contains &#x22;joey-ado-testing&#x22;, the &#x22;Expiration (UTC)&#x22; field contains &#x22;30 days&#x22; and the selected &#x22;Scopes&#x22; radio button is &#x22;Full access&#x22;."
+    width="375"
+  />
+</Frame>
+
+🛠️ In the **Name** field, enter a name for the token. To make it easier to identify, we suggest you include “Warp” in the name.
+
+🛠️ Under **Scopes**, change the option to **Full access**.
+
+<Info>
+  For the purposes of this Quickstart, we’ll leave the **Expiration** field at
+  the default value of 30 days.
+</Info>
+
+🛠️ Click the **Create** button.
+
+You should now see the _Success!_ panel, which will display the personal access token you just created:
+
+<Frame caption="The *Success!* panel.">
+  <img
+    src="/content/media/images/image (22) (1).png"
+    alt="The &#x22;Success!&#x22; panel, which is a form. There is a text field containing the Personal Access Token. There are instructions to copy the token now because Azure DevOps does not store it and the user will never be able to access its value again."
+    width="375"
+  />
+</Frame>
+
+🛠️ Copy the token and **save it in a safe place** — preferably a password manager.
+
+<Warning>
+This will be the only time that this Personal Access Token will be presented to you.
+
+Make sure you’ve copied it someplace safe before clicking the **Close** button!
+
+</Warning>
+
+🛠️ Click the **Close** button.
+
+When you close the _Success!_ panel, you will be taken back to the _Personal Access Tokens_ page. You will see the personal access token you just created listed there:
+
+<Frame caption="The *Personal Access Tokens* page, with the newly-created Personal Access Token.">
+  <img
+    src="/content/media/images/image (23) (1).png"
+    alt="The Personal Access Tokens page, with the newly-created Personal Access Token. The page now has a list, containing one token: &#x22;Warp migration 1&#x22;, the token that was created just now."
+  />
+</Frame>

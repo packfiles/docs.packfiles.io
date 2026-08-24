@@ -1,0 +1,173 @@
+---
+title: "Migrate a Repository"
+description: Let’s migrate!
+icon: '5'
+
+layout:
+  title:
+    visible: true
+---
+### Objective
+
+At last, it’s time to migrate a repository to GitHub! You’ll do this entirely in _Migration HQ_.
+
+**At the end of this section, you will have a repository that has been migrated from its source and into your GitHub organization.**
+
+
+<Info>
+Search for the 🛠️ emoji if you’d like to skim through this content while focusing on the steps you need to follow.
+</Info>
+
+
+### Select a Repository to Migrate
+
+After scanning your source for repositories, you navigated to _Migration HQ_’s _Issues_ page, where you saw the open issues list:
+
+<Frame caption="*Migration HQ*’s *Issues* page, with a close-up view of the open issues list.">
+  <img src="/content/media/images/image (1) (1).png" alt="Migration HQ’s Issues page, with a close-up view of the open issues list." />
+</Frame>
+
+Each item in the open issues list represents a repository to be migrated. After migrating a repository, Warp automatically closes its issue, which moves it to the closed issues list.
+
+Let’s migrate a repository! For this example, we’ll migrate **TailwindTraders-Website**, whose issue is at the top of the open issues list pictured above.
+
+🛠️ In your open issues list, click on the issue for the repository you want to migrate.
+
+The page for the issue will appear:
+
+<Frame caption="The page for the *TailwindTraders-Website* issue.">
+  <img src="/content/media/images/image (2).png" alt="The page for the TailwindTraders-Website issue." />
+</Frame>
+
+### Migrate the Repository
+
+🛠️ Scroll to the comments section at the bottom of the issue page:
+
+<Frame caption="The *Add a comment* box at the bottom of the page for the *TailwindTraders-Website* issue.">
+  <img src="/content/media/images/image (15).png" alt="The &#x22;Add a comment&#x22; box at the bottom of the page for the &#x22;TailwindTraders-Website&#x22; issue." />
+</Frame>
+
+You issue commands to Warp in comments by using _slash commands_ — commands that begin with the slash (`/`) character. One of these commands is /migrate, which tells Warp to migrate the repository represented by this issue.
+
+🛠️ Enter the slash command `/migrate` into the comment box and click the **Comment** button.
+
+A couple of seconds later, Warp will confirm that it received the command. The comments section will look like this:
+
+<Frame caption="The comments section of the page for the *TailwindTraders-Website* issue.">
+  <img src="/content/media/images/image (16).png" alt="The comments section of the page for the TailwindTraders-Website issue. The first comment, by the user “AccordionGuy”, says “/migrate”. The follow-up comment, by the user “packfiles-warp”, says “@AccordionGuy, your migration’s in progress! We’ll let you know when it’s complete.”" />
+</Frame>
+
+Warp — which will have the user name **packfiles-warp** — always provides a response to your commands as a follow-up comment. In the example above, it’s notifying you that the migration process has begun.
+
+It typically takes a few minutes to perform a migration. Let’s use this time to watch the migration’s progress.
+
+🛠️ Switch to _Migration HQ_’s _Actions_ page by clicking the **Actions** tab:
+
+<Frame caption="*Migration HQ*’s *Actions* page.">
+  <img src="/content/media/images/image (17).png" alt="Migration HQ’s Actions page with a new active Warp Runner Agent. " />
+</Frame>
+
+You’ll see a new Warp Runner Agent running the workflow that performs the migration:
+
+<Frame>
+  <img src="/content/media/images/image (21).png" alt="The Warp Runner Agent, up close." width="375" />
+</Frame>
+
+🛠️ Click on the Runner Agent to get a closer look at what it’s doing.
+
+You’ll see the Runner Agent’s page:
+
+<Frame caption="The Warp Runner Agent’s page.">
+  <img src="/content/media/images/image (19).png" alt="The Warp Runner Agent’s page." />
+</Frame>
+
+Let’s get an even closer look at what the Runner Agent is doing.
+
+🛠️ Click on the job that the Runner Agent is running — it’s any of the objects onscreen labeled **Packfiles Warp Runner Agent** that has a spinning yellow icon beside it:
+
+<Frame>
+  <img src="/content/media/images/image (20).png" alt="The Warp Runner Agent up close." width="303" />
+</Frame>
+
+You’ll go to a page where you can see the log files that the job is generating in real time:
+
+<Frame caption="The logs for the Warp Runner Agent, while the Agent is running.">
+  <img src="/content/media/images/image (22).png" alt="The logs for the Warp Runner Agent." />
+</Frame>
+
+A couple of minutes later, the migration will be complete. You’ll know this has happened when the Runner Agent’s icon changes from spinning and yellow to a static green checkmark:
+
+<Frame caption="The logs for the Warp Runner Agent, after the Agent has completed its task.">
+  <img src="/content/media/images/image (23).png" alt="The logs for the Warp Runner Agent, after the Agent has completed its task." />
+</Frame>
+
+🛠️ Click the **Actions** tab to return to the top level of the _Actions_ page.
+
+You’ll see that the Runner Agent completed its tasks:
+
+<Frame caption="*Migration HQ*’s *Actions* page.">
+  <img src="/content/media/images/image (18).png" alt="Migration HQ’s Actions page after the Warp Runner Agent has completed its task." />
+</Frame>
+
+### Examine Your Migrated Repository
+
+With the Runner Agent’s tasks complete, your repository has been migrated! Let’s look at its issue.
+
+🛠️ Click the **Issues** tab to view the _Issues_ page.
+
+You’ll see something like this:
+
+<Frame caption="*Migration HQ*’s *Issues* page — the open issues.">
+  <img src="/content/media/images/image (24).png" alt="Migration HQ’s &#x22;Issues&#x22; page, with the open issues list displayed. The open issues list displays 4 items." />
+</Frame>
+
+Notice that:
+
+* There’s one less item in the open issues list, and
+* There one new item in the formerly empty closed issues list.
+
+🛠️ Click the **Closed** tab to view the closed issues list.
+
+You’ll see the issue for the newly migrated repository:
+
+<Frame caption="*Migration HQ*’s *Issues* page — the closed issues.">
+  <img src="/content/media/images/image (26).png" alt="Migration HQ’s &#x22;Issues&#x22; page, with the closed issues list displayed. The closed issues list displays 1 item." />
+</Frame>
+
+🛠️ Click the issue to view its details:
+
+<Frame>
+  <img src="/content/media/images/image (27).png" alt="" />
+</Frame>
+
+You’ll see that the issue has been updated:
+
+<Frame caption="The updated page for the *TailwindTraders-Website* issue.">
+  <img src="/content/media/images/image (28).png" alt="The updated page for the &#x22;TailwindTraders-Website&#x22; issue. Its content now indicates that the repository has been migrated." />
+</Frame>
+
+🛠️ Scroll to the comments section at the bottom of the page.
+
+You’ll see a new comment from Warp, followed by a new notification:
+
+<Frame caption="The newest comment on the *TailwindTraders-Website* issue page.">
+  <img src="/content/media/images/image (30).png" alt="The newest comment on the &#x22;TailwindTraders-Website&#x22; issue page. The comment says &#x22;@AccordionGuy, your migration was successful. Visit your new code’s home at TailwindTraders.TailwindTraders-Website.&#x22;" />
+</Frame>
+
+The comment informs you that the migration was successful and provides a link to the newly migrated repository.
+
+The notification below the comment informs you that Warp automatically closed this issue.
+
+🛠️ Confirm that the migration was successful by clicking the link in the comment. In this example, the link is the text **Tailwind-Traders.TailwindTraders-Website**.
+
+Here’s what the example migrated repository looks like:
+
+<Frame caption="The migrated Tailwind-Traders repository.">
+  <img src="/content/media/images/image (32).png" alt="The &#x22;Code&#x22; page for the migrated Tailwind-Traders repository." />
+</Frame>
+
+<Success>
+🙌 Congratulations — you did it! 🙌 
+
+You successfully migrated a repository!
+</Success>

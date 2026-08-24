@@ -1,0 +1,35 @@
+---
+title: "Azure DevOps"
+icon: "microsoft"
+description: Slash Commands for Azure DevOps
+
+layout:
+  title:
+    visible: true
+---
+Slash commands in this section are supported for Azure DevOps repositories. 
+
+## Commands
+
+<CardGroup cols={2}>
+	<Card title="/rewire-pipeline" icon="wrench" href="rewire-pipeline">
+		Rewire one Azure Pipeline to target the migrated GitHub repository.
+	</Card>
+	<Card title="/rewire-all-pipelines" icon="wrench" href="rewire-all-pipelines">
+		Rewire all Azure Pipelines associated with this repository.
+	</Card>
+	<Card title="/integrate-boards" icon="link" href="integrate-boards">
+		Configure integration between Azure Boards and the destination GitHub repo.
+	</Card>
+	<Card title="/autolink-work-items" icon="paperclip" href="autolink-work-items">
+		Configure GitHub autolinks for Azure Boards work item references.
+	</Card>
+	<Card title="/lock-ado-repo" icon="lock" href="lock-ado-repo">
+		Lock the source Azure DevOps repository in read-only mode.
+	</Card>
+	<Card title="/disable-ado-repo" icon="ban" href="disable-ado-repo">
+		Disable access to the source Azure DevOps repository.
+	</Card>
+</CardGroup>
+
+To learn more about Warp's support for Azure DevOps, refer [our documentation ](../../../migrations/azure-devops/)in the migrations section.

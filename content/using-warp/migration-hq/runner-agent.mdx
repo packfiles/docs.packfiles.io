@@ -1,0 +1,88 @@
+---
+title: "Runner Agent"
+description: How Warp does what it does.
+icon: microchip
+
+layout:
+  title:
+    visible: true
+---
+### Overview
+
+To perform the various tasks that make up the migration process, Warp employs GitHub hosted runners — pre-configured virtual machines provided by GitHub to run workflows. These are Warp’s Runner Agents.
+
+For any Warp operation that takes more than a few seconds to execute, you should be able to open the **Actions** tab of the _Migration HQ_ repository for your project and see the Warp Runner Agent running that operation:
+
+<Frame>
+  <img src="/content/media/images/image (60).png" alt="" />
+</Frame>
+
+Some of the operations performed by Warp’s Runner Agents include:
+
+* Verifying the credentials stored in your vault file.
+* Scanning the source for repositories.
+* Migrating a repository from the source to the destination.
+
+### Viewing a Runner Agent’s Logs
+
+To view a Runner Agent’s logs, click on its entry. This will bring up the runner’s details page:
+
+<Frame>
+  <img src="/content/media/images/image (68).png" alt="" />
+</Frame>
+
+In the **runner.yml** section,  click the button marked **Packfiles Warp Runner ...** to view the Runner Agent’s collection of logs:
+
+<Frame>
+  <img src="/content/media/images/image (65).png" alt="" />
+</Frame>
+
+Click on any log title to expand it and view its contents. For example, here’s the log for the **Set up job** process:
+
+<Frame>
+  <img src="/content/media/images/image (66).png" alt="" />
+</Frame>
+
+### Example: Troubleshooting Using a Runner Agent’s Logs
+
+In the event that Warp encounters a problem while migrating a repository, you’ll see a message like this in comments it the repository’s issue:
+
+<Frame>
+  <img src="/content/media/images/image (61).png" alt="" />
+</Frame>
+
+If you see a message like this, expand the **Troubleshoot** section...
+
+<Frame>
+  <img src="/content/media/images/image (63).png" alt="" />
+</Frame>
+
+...then click the **Warp runner logs** link. You’ll be taken to the runner’s details page:
+
+<Frame>
+  <img src="/content/media/images/image (64).png" alt="" />
+</Frame>
+
+To view the Runner Agent’s collection of logs, click the button marked **Packfiles Warp Runner ...** 
+
+<Frame>
+  <img src="/content/media/images/image (65).png" alt="" />
+</Frame>
+
+The search text field near the upper right corner of the page applies to all of the Runner Agent’s logs. A search for `Error` reveals the problem:
+
+<Frame>
+  <img src="/content/media/images/image (67).png" alt="" />
+</Frame>
+
+The end of line 429 shows what happened: `Name cannot end in .wiki`. 
+
+A quick look at the issue’s body reveals the source of the problem: someone specified that the destination repository’s name as **PartsUnlimited.wiki**:
+
+<Frame>
+  <img src="/content/media/images/image (69).png" alt="" />
+</Frame>
+
+ℹ️ GitHub repository names cannot end with **.wiki**; this is because it automatically creates a wiki for each repository using the repository’s name followed by the **.wiki** extension.
+
+Fortunately, the solution is simple: rename the destination repository using the /rename-destination slash command so that it doesn’t end with **.wiki**.

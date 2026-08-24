@@ -1,0 +1,271 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "maple",
+  "name": "Packfiles Docs",
+  "logo": {
+    "light": "/content/media/images/light logo.svg",
+    "dark": "/content/media/images/dark logo.svg"
+  },
+  "favicon": "/content/media/images/favicon.svg",
+  "colors": {
+    "primary": "#ee7203",
+    "light": "#ee7203",
+    "dark": "#ee7203"
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "Welcome",
+        "icon": "hand-wave",
+        "pages": [],
+        "root": "content/index"
+      },
+      {
+        "group": "Guides",
+        "pages": [
+          "content/guides/whats-warp",
+          {
+            "group": "Setup Guide",
+            "icon": "rocket-launch",
+            "pages": [
+              "content/guides/quickstart/install-the-prerequisites",
+              "content/guides/quickstart/create-and-configure-your-project",
+              "content/guides/quickstart/set-up-your-vault",
+              "content/guides/quickstart/scan-your-sources-for-repositories",
+              "content/guides/quickstart/migrate-a-repository"
+            ],
+            "root": "content/guides/quickstart/index"
+          }
+        ]
+      },
+      {
+        "group": "Product",
+        "pages": [
+          "content/product/concepts/index",
+          "content/product/roadmap"
+        ]
+      },
+      {
+        "group": "Migrations",
+        "pages": [
+          {
+            "group": "Azure DevOps",
+            "icon": "microsoft",
+            "pages": [
+              "content/migrations/azure-devops/service-connections",
+              "content/migrations/azure-devops/limitations"
+            ],
+            "root": "content/migrations/azure-devops/index"
+          },
+          {
+            "group": "Bitbucket Server",
+            "icon": "bitbucket",
+            "pages": [
+              "content/migrations/bitbucket-server/limitations"
+            ],
+            "root": "content/migrations/bitbucket-server/index"
+          }
+        ]
+      },
+      {
+        "group": "Using Warp",
+        "pages": [
+          {
+            "group": "Migration HQ",
+            "icon": "github",
+            "pages": [
+              {
+                "group": "Issues",
+                "icon": "list-check",
+                "pages": [
+                  "content/using-warp/migration-hq/issues/issue-page"
+                ],
+                "root": "content/using-warp/migration-hq/issues/index"
+              },
+              "content/using-warp/migration-hq/labels",
+              "content/using-warp/migration-hq/warp-yml",
+              "content/using-warp/migration-hq/custom-scripts",
+              "content/using-warp/migration-hq/custom-tasks",
+              "content/using-warp/migration-hq/access-policies",
+              "content/using-warp/migration-hq/warpspaces",
+              "content/using-warp/migration-hq/runner-agent",
+              "content/using-warp/migration-hq/runner-yml",
+              {
+                "group": "GitHub Copilot Agent",
+                "icon": "robot",
+                "pages": [
+                  "content/using-warp/migration-hq/github-copilot-agent/migration-planning",
+                  "content/using-warp/migration-hq/github-copilot-agent/migration-diagnosis",
+                  "content/using-warp/migration-hq/github-copilot-agent/validate-configuration"
+                ],
+                "root": "content/using-warp/migration-hq/github-copilot-agent/index"
+              }
+            ],
+            "root": "content/using-warp/migration-hq/index"
+          },
+          {
+            "group": "Projects",
+            "icon": "grid-2-plus",
+            "pages": [
+              "content/using-warp/projects/dashboard",
+              "content/using-warp/projects/team",
+              "content/using-warp/projects/capacity",
+              "content/using-warp/projects/settings"
+            ],
+            "root": "content/using-warp/projects/index"
+          },
+          {
+            "group": "Slash Commands",
+            "pages": [
+              {
+                "group": "Global",
+                "pages": [
+                  "content/using-warp/slash-commands/global/help",
+                  "content/using-warp/slash-commands/global/run"
+                ],
+                "root": "content/using-warp/slash-commands/global/index",
+                "icon": "terminal"
+              },
+              {
+                "group": "Migration",
+                "icon": "arrow-right",
+                "pages": [
+                  "content/using-warp/slash-commands/migration/migrate",
+                  "content/using-warp/slash-commands/migration/rename-destination"
+                ],
+                "root": "content/using-warp/slash-commands/migration/index"
+              },
+              {
+                "group": "Backlog Issue",
+                "pages": [
+                  "content/using-warp/slash-commands/backlog-issue/refresh"
+                ],
+                "root": "content/using-warp/slash-commands/backlog-issue/index",
+                "icon": "list-check"
+              },
+              {
+                "group": "Azure DevOps",
+                "pages": [
+                  "content/using-warp/slash-commands/azure-devops/rewire-pipeline",
+                  "content/using-warp/slash-commands/azure-devops/rewire-all-pipelines",
+                  "content/using-warp/slash-commands/azure-devops/integrate-boards",
+                  "content/using-warp/slash-commands/azure-devops/autolink-work-items",
+                  "content/using-warp/slash-commands/azure-devops/lock-ado-repo",
+                  "content/using-warp/slash-commands/azure-devops/disable-ado-repo"
+                ],
+                "root": "content/using-warp/slash-commands/azure-devops/index",
+                "icon": "microsoft"
+              },
+              {
+                "group": "GitHub",
+                "pages": [
+                  "content/using-warp/slash-commands/github/add-team"
+                ],
+                "root": "content/using-warp/slash-commands/github/index",
+                "icon": "github"
+              }
+            ],
+            "root": "content/using-warp/slash-commands/index",
+            "icon": "wand-magic-sparkles"
+          },
+          {
+            "group": "Support",
+            "pages": [
+              "content/using-warp/support/copilot-chat",
+              "content/using-warp/support/partners",
+              "content/using-warp/support/knowledge-base",
+              {
+                "group": "Troubleshooting",
+                "icon": "wrench",
+                "pages": [
+                  "content/using-warp/support/troubleshooting/failed-inventory-scan",
+                  "content/using-warp/support/troubleshooting/failed-migration",
+                  "content/using-warp/support/troubleshooting/main-branch-requirement",
+                  "content/using-warp/support/troubleshooting/marketplace-installation-bypass"
+                ],
+                "root": "content/using-warp/support/troubleshooting/index"
+              }
+            ],
+            "root": "content/using-warp/support/index",
+            "icon": "hand-holding-heart"
+          },
+          {
+            "group": "Warp Vault",
+            "pages": [
+              {
+                "group": "Download Warp Vault",
+                "pages": [
+                  "content/using-warp/warp-vault/download-warp-vault/verify-your-copy-of-warp-vault"
+                ],
+                "root": "content/using-warp/warp-vault/download-warp-vault/index",
+                "icon": "circle-down"
+              },
+              {
+                "group": "Supported Credential Providers",
+                "pages": [
+                  "content/using-warp/warp-vault/supported-credential-providers/amazon-s3-storage",
+                  "content/using-warp/warp-vault/supported-credential-providers/azure-blob-storage",
+                  "content/using-warp/warp-vault/supported-credential-providers/azure-devops-services",
+                  "content/using-warp/warp-vault/supported-credential-providers/bitbucket-server",
+                  "content/getting-started/quickstart/gather-your-credentials/get-your-github-credentials"
+                ],
+                "root": "content/using-warp/warp-vault/supported-credential-providers/index",
+                "icon": "shapes"
+              },
+              {
+                "group": "Using Credentials in Scripts",
+                "pages": [
+                  {
+                    "group": "Vault Schema",
+                    "pages": [
+                      "content/using-warp/warp-vault/using-credentials-in-scripts/vault-schema/amazon-s3-credential-schema",
+                      "content/using-warp/warp-vault/using-credentials-in-scripts/vault-schema/azure-blob-storage-credential-schema",
+                      "content/using-warp/warp-vault/using-credentials-in-scripts/vault-schema/azure-devops-services-credential-schema",
+                      "content/using-warp/warp-vault/using-credentials-in-scripts/vault-schema/bitbucket-server-credential-schema",
+                      "content/using-warp/warp-vault/using-credentials-in-scripts/vault-schema/github-destination-credential-schema"
+                    ],
+                    "root": "content/using-warp/warp-vault/using-credentials-in-scripts/vault-schema/index",
+                    "icon": "brackets-curly"
+                  }
+                ],
+                "root": "content/using-warp/warp-vault/using-credentials-in-scripts/index",
+                "icon": "scroll"
+              }
+            ],
+            "root": "content/using-warp/warp-vault/index",
+            "icon": "key"
+          }
+        ]
+      },
+      {
+        "group": "CLI",
+        "pages": [
+          "content/warp-cli"
+        ]
+      },
+      {
+        "group": "Security",
+        "pages": [
+          "content/security/packfiles",
+          {
+            "group": "Warp's Security Model",
+            "pages": [
+              "content/security/warp-security-model/credential-management",
+              "content/security/warp-security-model/private-compute",
+              "content/security/warp-security-model/data-privacy"
+            ],
+            "root": "content/security/warp-security-model/index",
+            "icon": "building-lock"
+          }
+        ]
+      },
+      {
+        "group": "Billing & Licensing",
+        "pages": [
+          "content/billing-and-licensing/overview",
+          "content/billing-and-licensing/free-trial"
+        ]
+      }
+    ]
+  }
+}
