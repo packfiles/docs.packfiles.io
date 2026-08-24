@@ -45,24 +45,32 @@ Looking for a quick tour of Warp Vault's features and interface? Check out [this
 
 🛠️ To kick things off, you'll need to create a Vault for your Migration Project. Open the Warp Vault application on your machine, expand the **Add Menu**, and choose "Create Vault".
 
-<iframe src="https://static-pub.packfiles.io/knowledge_base/guides/vault_setup/Create%20Vault.mp4" width="100%" height="405" />Creating a New Vault
+<Frame caption="Creating a New Vault">
+  <iframe src="https://static-pub.packfiles.io/knowledge_base/guides/vault_setup/Create%20Vault.mp4" width="100%" height="405" />
+</Frame>
 🛠️ In the window that appears, click on the button to **Select a Directory**. You'll need to choose the **config** folder inside of the local clone of your **Migration HQ repository**.
 
 <Warning>
 It's important to get this right. If you don't choose the **config** folder in your local **Migration HQ** clone, Warp won't be able to access your credentials in later steps.
 </Warning>
 
-<iframe src="https://static-pub.packfiles.io/knowledge_base/guides/vault_setup/Select%20Vault%20File%20Directory.mp4" width="100%" height="405" />Selecting a Vault's Location on Disk
+<Frame caption="Selecting a Vault's Location on Disk">
+  <iframe src="https://static-pub.packfiles.io/knowledge_base/guides/vault_setup/Select%20Vault%20File%20Directory.mp4" width="100%" height="405" />
+</Frame>
 🛠️ After choosing the directory to save your Vault, you can choose an **Icon**, give your Vault a **Name**, and a **Description**. These fields are local to your machine, and help you identify your Vault in the list (if you have multiple).
 
-<iframe src="https://static-pub.packfiles.io/knowledge_base/guides/vault_setup/Create%20Vault%20Second%20Step.mp4" width="100%" height="405" />Filling in a Vault's Name and Description
+<Frame caption="Filling in a Vault's Name and Description">
+  <iframe src="https://static-pub.packfiles.io/knowledge_base/guides/vault_setup/Create%20Vault%20Second%20Step.mp4" width="100%" height="405" />
+</Frame>
 🛠️ Finally, after clicking **Create**, you'll be presented with your Vault's Master Key. Store this key in a secure location, such as your password manager. You'll need it to complete setup and make changes to your Vault's credentials in the future.
 
 <Warning>
 Securely store your Master Key in a password manager. **If you lose track of it, the contents of your Vault will be lost**, and you won't be able to proceed with the rest of the setup process.
 </Warning>
 
-<iframe src="https://static-pub.packfiles.io/knowledge_base/guides/vault_setup/Unlock%20Vault.mp4" width="100%" height="405" />Unlocking a Vault with its Master Key
+<Frame caption="Unlocking a Vault with its Master Key">
+  <iframe src="https://static-pub.packfiles.io/knowledge_base/guides/vault_setup/Unlock%20Vault.mp4" width="100%" height="405" />
+</Frame>
 ### Add Credentials to Your Vault
 
 Your Vault has been created— congratulations! The next step is to **add credentials** to it. 
@@ -86,7 +94,9 @@ Once your credentials have been collected, you'll be ready to add them to your V
 
 🛠️ Use the **Add Button** in Warp Vault to add each type of credential you need for your Migration Project. Selecting a credential type will add a new entry to your Vault, opening a form where you can edit its details and configuration.
 
-<iframe src="https://static-pub.packfiles.io/knowledge_base/guides/vault_setup/Vault%20Add%20Providers.mp4" width="100%" height="405" />Adding Credentials to Warp Vault
+<Frame caption="Adding Credentials to Warp Vault">
+  <iframe src="https://static-pub.packfiles.io/knowledge_base/guides/vault_setup/Vault%20Add%20Providers.mp4" width="100%" height="405" />
+</Frame>
 ### Test Your Credentials
 
 Now that you've added credentials to your Vault, the next step is to **test** them. This process ensures your credentials are ready to use with Warp, and that you'll be able to perform migrations successfully. 
@@ -95,7 +105,9 @@ Luckily, Warp Vault has an integrated credential testing feature that makes this
 
 🛠️ Use the **Credential Testing** feature of Warp Vault to test the credentials you've configured. When each credential you've configured has a **Green Check**, you can save your changes and proceed.
 
-<iframe src="https://static-pub.packfiles.io/knowledge_base/guides/vault_setup/Test%20Credentials.mp4" width="100%" height="405" />Testing Credentials in Warp Vault
+<Frame caption="Testing Credentials in Warp Vault">
+  <iframe src="https://static-pub.packfiles.io/knowledge_base/guides/vault_setup/Test%20Credentials.mp4" width="100%" height="405" />
+</Frame>
 ### Commit and Push Your Vault File
 
 Next, you'll need to commit and push your encrypted Vault to your Migration HQ repository. 
@@ -108,7 +120,9 @@ Next, you'll need to commit and push your encrypted Vault to your Migration HQ r
 **Yes.** Warp's model for securely storing your secrets as an encrypted file in your Migration HQ repository follows [GitHub's published best practice guidelines](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions#storing-large-secrets) for managing large secrets on the platform.
 </Success>
 
-<iframe src="https://static-pub.packfiles.io/knowledge_base/guides/vault_setup/Commit%20and%20Push%20Vault%20File.mp4" width="100%" height="405" />Committing and Pushing a Vault to Migration HQ from VS Code
+<Frame caption="Committing and Pushing a Vault to Migration HQ from VS Code">
+  <iframe src="https://static-pub.packfiles.io/knowledge_base/guides/vault_setup/Commit%20and%20Push%20Vault%20File.mp4" width="100%" height="405" />
+</Frame>
 ### Confirm That the Vault Was Pushed to Migration HQ
 
 Just to be certain, let’s take a look at _Migration HQ_ to make sure that the Vault was actually pushed there.
@@ -137,7 +151,9 @@ The next step is to store the key for the Vault in the _Migration HQ_ repository
 
 You can do this manually by copying the Vault key and pasting it into the _Migration HQ_ repository’s [_Secrets_](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions) settings. 
 
-<iframe src="https://static-pub.packfiles.io/knowledge_base/guides/vault_setup/Add%20Repository%20Secret.mp4" width="100%" height="405" />Adding Your Master Key as a Migration-HQ Repository Secret
+<Frame caption="Adding Your Master Key as a Migration-HQ Repository Secret">
+  <iframe src="https://static-pub.packfiles.io/knowledge_base/guides/vault_setup/Add%20Repository%20Secret.mp4" width="100%" height="405" />
+</Frame>
 ### Confirm that that Vault and Key are in Migration HQ
 
 You should confirm that your Vault key was successfully stored in _Migration HQ_ by checking the repository’s _Secrets_ section in GitHub.
