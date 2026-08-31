@@ -4,8 +4,7 @@
   "name": "Packfiles Docs",
   "logo": {
     "light": "/content/media/images/light_logo.svg",
-    "dark": "/content/media/images/dark_logo.svg",
-    "href": "https://packfiles.mintlify.site/content/index"
+    "dark": "/content/media/images/dark_logo.svg"
   },
   "favicon": "/content/media/images/favicon.png",
   "colors": {
