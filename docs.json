@@ -2,6 +2,12 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
   "name": "Packfiles Docs",
+  "redirects": [
+    {
+      "source": "/getting-started/whats-warp",
+      "destination": "/content/index"
+    }
+  ],
   "logo": {
     "light": "/content/media/images/light_logo.svg",
     "dark": "/content/media/images/dark_logo.svg"
